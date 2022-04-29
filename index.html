@@ -6,113 +6,46 @@
         <meta name="viewport" content="width=device-width, initial-scale=1.0">
         <title>Audio</title>
         <link rel="icon" href="https://img.icons8.com/ios/50/000000/audio.png">
-
-        <style>
-            *{
-                box-sizing: border-box;
-                padding: 0;
-                margin: 0;
-            }
-
-            .audio-container {
-                position: relative;
-                /* width: 400px; */
-                /* height: 250px; */
-                width: 350px;
-                height: 400px;
-                top: 50vh;
-                transform: translateY(-50%);
-                margin: auto;
-                background-color: #343434;
-                border-radius: 10px;
-                text-align: center;
-            }
-
-            .img-container{
-                position: relative;
-                padding-top: 2px;
-                padding-bottom: 5px;
-                padding-left: 5px;
-                padding-right: 5px;
-                
-            }
-            .img {
-                display: inline-block;
-                position: relative;
-                max-height: 345px;
-                max-width: 300px;
-                
-            }
-
-            .controls {
-                width: 350px;
-                height: 54px;
-                position: absolute;
-                bottom: 0;
-                /* transform: translateY(-100%); */
-                background-color: #efefef;
-                border-radius: 5px 5px 10px 10px;
-                border: #212121 2px solid;
-                text-align: center;
-            }
-
-            .btn {
-                position: relative;
-                top: 50%;
-                transform: translateY(-50%);
-                width: 40px;
-                margin-left: 2%;    
-                margin-right: 2%;
-                background-color: #fff;
-                border-radius: 50%;
-                border: 1px solid #212121;
-            }
-
-            .btn:hover {
-                background-color: #cecece;
-            }
-
-            .btn:active{
-                background-color: #606060;
-                padding: 2px;
-            }
-
-
-
-        </style>
-
+        <link rel="stylesheet" href="./style/style.css" type="text/css">
     </head>
+
     <body>
 
+        <!-- <h1>MP3 Player</h1> -->
 
         <div class="audio-container">
             
-            
-            <audio id="song1">
+            <audio id="song">
                 <source src="./assets/audios/naruto-op1.mp3">
             </audio>
-            <audio id="song2">
-                <source src="./assets/audios/naruto-op2.mp3">
-                <source src="./assets/audios/naruto-op2.ogg">
-            </audio>
-            <audio id="song3">
-                <source src="./assets/audios/naruto-op3.mp3">
-            </audio>
 
-            <div class="img-container">
-                <img class="img" src="./assets/poster/naruto.jpeg">
-                <!-- <img class="img" src="./assets/poster/naruto-haruka-kanata.gif"> -->
+            <div class="description-container">
+
+                <div class="button-left">
+                    <img class="img-button-left" onclick="voltarFaixa()" src="https://img.icons8.com/material/45/000000/back--v1.png"/>
+                </div>
+
+                <div class="img-container">
+                    <img class="img" src="./assets/poster/naruto.jpeg">
+                    <!-- <img class="img" src="../assets/poster/poster-cinema.jpg"> -->
+                    <!-- <img class="img" src="../assets/poster/naruto-haruka-kanata.gif"> -->
+                </div>
+
+                <div class="button-right">
+                    <img class="img-button-right" onclick="avancarFaixa()" src="https://img.icons8.com/material/45/000000/forward--v1.png"/>
+                </div>
+
             </div>
 
             <div class="controls">
-                <img id="retroceder5" class="btn" onclick="retroceder5()" src="https://img.icons8.com/material/40/000000/replay-5.png"/>
+                <img class="btn" onclick="retroceder5()" src="https://img.icons8.com/material/40/000000/replay-5.png"/>
                 <img id="playPause" class="btn" onclick="playPause()" src="https://img.icons8.com/material/40/000000/play--v1.png"/>
-                <img id="avancar5" class="btn" onclick="avancar5()" src="https://img.icons8.com/material/40/000000/forward-5.png"/>
+                <img class="btn" onclick="avancar5()" src="https://img.icons8.com/material/40/000000/forward-5.png"/>
                 <img class="btn" onclick="speeddown()" src="https://img.icons8.com/ios/40/000000/slow-download.png"/>
                 <img class="btn" onclick="speedup()" src="https://img.icons8.com/ios/40/000000/fast-download.png"/>
                 <!-- <img class="btn" src="https://img.icons8.com/ios/50/000000/sorting-options--v1.png"/> -->
                 
-                <script src="./script.js"></script>
+                <script src="./scripts/script.js"></script>
             </div>
         </div>
 
