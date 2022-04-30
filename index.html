@@ -9,7 +9,7 @@
         <link rel="stylesheet" href="./style/style.css" type="text/css">
     </head>
 
-    <body>
+    <body onload="timer()">
 
         <!-- <h1>MP3 Player</h1> -->
 
@@ -21,20 +21,25 @@
 
             <div class="description-container">
 
-                <div class="button-left">
-                    <img class="img-button-left" onclick="voltarFaixa()" src="https://img.icons8.com/material/45/000000/back--v1.png"/>
-                </div>
-
                 <div class="img-container">
-                    <img class="img" src="./assets/poster/naruto.jpeg">
+                    <img id="poster" class="img" src="./assets/poster/naruto-op1.jpg">
                     <!-- <img class="img" src="../assets/poster/poster-cinema.jpg"> -->
                     <!-- <img class="img" src="../assets/poster/naruto-haruka-kanata.gif"> -->
                 </div>
 
-                <div class="button-right">
-                    <img class="img-button-right" onclick="avancarFaixa()" src="https://img.icons8.com/material/45/000000/forward--v1.png"/>
+                <div class="button-left">
+                    <img class="img-button-left" onclick="voltarFaixa(), mudarPoster()" src="https://img.icons8.com/material/45/000000/back--v1.png"/>
                 </div>
 
+                <div class="button-right">
+                    <img class="img-button-right" onclick="avancarFaixa(), mudarPoster()" src="https://img.icons8.com/material/45/000000/forward--v1.png"/>
+                </div>
+
+                <div class="bar-container">
+                    <input id="bar" type="range" min="0" value="0" max="100">
+                    <span id="timer-atual">0s</span>
+                    <span id="timer-total"></span>
+                </div>
             </div>
 
             <div class="controls">
@@ -43,12 +48,8 @@
                 <img class="btn" onclick="avancar5()" src="https://img.icons8.com/material/40/000000/forward-5.png"/>
                 <img class="btn" onclick="speeddown()" src="https://img.icons8.com/ios/40/000000/slow-download.png"/>
                 <img class="btn" onclick="speedup()" src="https://img.icons8.com/ios/40/000000/fast-download.png"/>
-                <!-- <img class="btn" src="https://img.icons8.com/ios/50/000000/sorting-options--v1.png"/> -->
-                
-                <script src="./scripts/script.js"></script>
             </div>
         </div>
-
-
-    </body>
+        <script src="./scripts/script.js"></script>
+    </body>    
 </html>
